@@ -22,7 +22,7 @@ We use technology to solve real problems, and invest in companies that shape the
 
 ## Der rote Faden
 
-*Der rote Faden*, the red thread, is the German idiom for the line that runs through everything and holds it together. Our mark shows it literally: a ball of tangled threads, and one red thread running cleanly through it. Every company we build or back is one section of that thread.
+*Der rote Faden*, the red thread, is the German idiom for the line that runs through everything and holds it together. Our mark shows it literally: a ball of tangled threads, and one red thread wound in among them that finds its way out. Every company we build or back is one section of that thread.
 
 ---
 
