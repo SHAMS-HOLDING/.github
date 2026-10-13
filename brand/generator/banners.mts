@@ -14,28 +14,40 @@ type Theme = { bg: string; ink: string; muted: string; yarnBack: string; yarnFro
 const NIGHT: Theme = { bg: '#07070a', ink: '#F3EFE9', muted: '#8d8881', yarnBack: '150,143,134', yarnFront: '242,232,218', red: '#ff2d4a', glow: true };
 const DAY: Theme = { bg: '#FAF8F5', ink: '#141414', muted: '#6b6762', yarnBack: '120,114,106', yarnFront: '60,56,52', red: '#C8102E', glow: false };
 
-const BALL: BallSpec = { wraps: 52, perWrap: 110, yaw: 0.6, pitch: 0.42, bands: 8, red: { wraps: 2.25, seed: 11, exit: [0.92, -0.22, 0.32], core: 0.42 } };
+// The grey turns red at the upper left, heading up and over to the right; the red leaves to the right.
+const BALL: BallSpec = {
+  wraps: 52, perWrap: 110, yaw: 0.6, pitch: 0.42, bands: 8,
+  red: { wraps: 1, start: [-0.7, -0.45, 0.55], heading: [1, -0.45, 0], exit: [0.92, -0.22, 0.32], core: 0.42, ignite: 0.3 },
+};
 const GREY = [0.09, 0.15, 0.23, 0.33, 0.34, 0.48, 0.64, 0.82];
+const rgb = (hex: string) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
 
-// The ball, back to front by depth band, the red fibre woven in among the grey ones;
-// then its tail, which leaves the ball, levels out and runs off the frame at endX.
+// The ball, back to front by depth band: in each, the grey yarn, the stretch where it
+// turns red and the red fibre. Then its tail, which leaves the ball, levels out and
+// runs off the frame at endX.
 function ball(cx: number, cy: number, R: number, th: Theme, endX: number) {
-  const { grey, red, out, exit: [ex, ey], dir: [dx, dy] } = stillBall(BALL, cx, cy, R);
+  const { parts, out, exit: [ex, ey], dir: [dx, dy] } = stillBall(BALL, cx, cy, R);
   const s = Math.max(R / 240, 0.7), f = (v: number) => v.toFixed(1);
   const L = endX - ex, ty = ey + (dy / dx) * L * 0.5;
   const tail = `${out}C${f(ex + (dx * L) / 3)} ${f(ey + (dy * L) / 3)} ${f(endX - L / 3)} ${f(ty)} ${f(endX)} ${f(ty)}`;
-  const rw = th.glow ? 2 : 2.6;
+  const rw = th.glow ? 2 : 2.6, last = parts.length - 1, red = rgb(th.red);
   const path = (d: string, stroke: string, w: number, extra = '') => `<path d="${d}" stroke="${stroke}" stroke-width="${w.toFixed(2)}"${extra}/>`;
   let g = th.glow ? `<circle cx="${cx}" cy="${cy}" r="${R * 1.15}" fill="url(#sun)"/>` : '';
   for (let b = 0; b < 8; b++) {
-    const front = b >= 4;
-    if (front) g += path(grey[b], th.bg, (2.6 + (b - 4) * 0.25) * s);
-    g += path(grey[b], `rgba(${front ? th.yarnFront : th.yarnBack},${GREY[b]})`, (front ? 0.85 + (b - 4) * 0.18 : 0.7 + b * 0.07) * s);
-    if (!red[b]) continue;
-    if (!front) { g += path(red[b], th.red, rw * 0.8, ` opacity="${(0.3 + 0.15 * b).toFixed(2)}"`); continue; }
-    g += path(red[b], th.bg, rw + 2.4);
-    if (th.glow) g += path(red[b], th.red, 12, ' opacity="0.05"') + path(red[b], th.red, 4.5, ' opacity="0.2"');
-    g += path(red[b], th.red, rw);
+    const front = b >= 4, grey = (front ? th.yarnFront : th.yarnBack).split(',').map(Number);
+    const gw = (front ? 0.85 + (b - 4) * 0.18 : 0.7 + b * 0.07) * s, gh = (2.6 + (b - 4) * 0.25) * s;
+    const look = (p: number) => {
+      const u = p / last, w = gw + ((front ? rw : rw * 0.8) - gw) * u;
+      const a = GREY[b] + ((front ? 1 : 0.3 + 0.15 * b) - GREY[b]) * u;
+      return { u, w, halo: gh + (rw + 2.4 - gh) * u, color: `rgba(${grey.map((c, i) => Math.round(c + (red[i] - c) * u)).join(',')},${a.toFixed(2)})` };
+    };
+    // The grey first, then the red part: halos and glows all before strokes, so the colour steps join without seams.
+    for (const ps of [[0], parts.map((_, p) => p).slice(1)]) {
+      const on = ps.filter((p) => parts[p][b]);
+      if (front) for (const p of on) g += path(parts[p][b], th.bg, look(p).halo);
+      if (front && th.glow) for (const p of on) if (p > 0) g += path(parts[p][b], th.red, 12, ` opacity="${(0.05 * look(p).u).toFixed(3)}"`) + path(parts[p][b], th.red, 4.5, ` opacity="${(0.2 * look(p).u).toFixed(3)}"`);
+      for (const p of on) g += path(parts[p][b], look(p).color, look(p).w);
+    }
   }
   // Butt cap on the halo: a round one would reach back over the fibre the tail continues.
   g += path(tail, th.bg, rw + 2.4, ' stroke-linecap="butt"');
