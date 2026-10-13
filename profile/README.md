@@ -24,10 +24,6 @@ We use technology to solve real problems, and invest in companies that shape the
 
 *Der rote Faden*, the red thread, is the German idiom for the line that runs through everything and holds it together. Our mark shows it literally: a ball of tangled threads, and one red thread running cleanly through it. Every company we build or back is one section of that thread.
 
-## شمس · Shams means sun
-
-*Shams* is Arabic for sun, the oldest lever in the world: a single source that sets entire systems in motion. That is our aim: to bring light into complex problems and give companies the energy to outgrow themselves.
-
 ---
 
 ## What we do
@@ -76,10 +72,6 @@ We use technology to solve real problems, and invest in companies that shape the
 ## Der rote Faden
 
 Aus dem Knäuel der Möglichkeiten ziehen wir den einen Faden, der trägt. Unser Zeichen zeigt genau das: ein Knäuel aus Fäden und einen roten Faden, der sauber hindurchläuft. Jedes Unternehmen, das wir aufbauen oder an dem wir uns beteiligen, ist ein Abschnitt dieses Fadens.
-
-## شمس · Shams heißt Sonne
-
-Shams ist arabisch und bedeutet Sonne, der älteste Hebel der Welt: eine einzige Quelle, die ganze Systeme in Bewegung setzt. Daraus folgt unser Anspruch: Licht ins Dunkel komplexer Probleme bringen und Unternehmen die Energie geben, über sich hinauszuwachsen.
 
 ## Was wir machen
 
