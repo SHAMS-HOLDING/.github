@@ -11,8 +11,8 @@
 From the tangle of possibilities we pull the one thread that holds.<br>
 We use technology to solve real problems, and invest in companies that shape the future.
 
-[![Founder](https://img.shields.io/badge/Founder-LinkedIn-FF2D4A?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abdullahshams30/)
-[![PROTOMINDS](https://img.shields.io/badge/Portfolio-PROTOMINDS-07070A?style=for-the-badge)](https://github.com/PROTOMINDS-IO)
+[![Founder](https://img.shields.io/badge/Founder-LinkedIn-FF1A1A?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abdullahshams30/) <!-- brand:red -->
+[![PROTOMINDS](https://img.shields.io/badge/Portfolio-PROTOMINDS-07070A?style=for-the-badge)](https://github.com/PROTOMINDS-IO) <!-- brand:night -->
 
 `HOLDING` · `TECHNOLOGY` · `LONG-TERM INVESTMENTS`
 
