@@ -3,19 +3,18 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SHAMS-HOLDING/.github/main/brand/web/shams-banner-transparent.png">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SHAMS-HOLDING/.github/main/brand/web/shams-banner-transparent-onlight.png">
-  <img alt="SHAMS Holding · Der rote Faden" src="https://raw.githubusercontent.com/SHAMS-HOLDING/.github/main/brand/web/shams-banner-transparent-onlight.png" width="560">
+  <img alt="SHAMS Holding · Der rote Faden" src="https://raw.githubusercontent.com/SHAMS-HOLDING/.github/main/brand/web/shams-banner-transparent-onlight.png" width="640">
 </picture>
 
 ### Technology as leverage.
 
+From the tangle of possibilities we pull the one thread that holds.<br>
 We use technology to solve real problems, and invest in companies that shape the future.
 
-[![LinkedIn](https://img.shields.io/badge/Founder-LinkedIn-C8102E?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abdullahshams30/)
-[![PROTOMINDS](https://img.shields.io/badge/Portfolio-PROTOMINDS-141414?style=for-the-badge)](https://github.com/PROTOMINDS-IO)
+[![Founder](https://img.shields.io/badge/Founder-LinkedIn-FF2D4A?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abdullahshams30/)
+[![PROTOMINDS](https://img.shields.io/badge/Portfolio-PROTOMINDS-07070A?style=for-the-badge)](https://github.com/PROTOMINDS-IO)
 
 `HOLDING` · `TECHNOLOGY` · `LONG-TERM INVESTMENTS`
-
-Germany
 
 </div>
 
@@ -23,7 +22,11 @@ Germany
 
 ## Der rote Faden
 
-*Der rote Faden*, the red thread, is the German idiom for the line that runs through everything and holds it together. It is our central idea: every company we build or back is one section of the same thread, connected by technology, long-term thinking and entrepreneurial ownership.
+*Der rote Faden*, the red thread, is the German idiom for the line that runs through everything and holds it together. Our mark shows it literally: a ball of tangled threads, and one red thread running cleanly through it. Every company we build or back is one section of that thread.
+
+## شمس · Shams means sun
+
+*Shams* is Arabic for sun, the oldest lever in the world: a single source that sets entire systems in motion. That is our aim: to bring light into complex problems and give companies the energy to outgrow themselves.
 
 ---
 
@@ -39,10 +42,10 @@ Germany
 
 ## Portfolio
 
-| Company | Stake | Focus |
-| :--- | :---: | :--- |
-| **[PROTOMINDS](https://www.protominds.io/)** · [GitHub](https://github.com/PROTOMINDS-IO) | 50 % | Applied AI: computer vision, RAG and on-premise AI that turn industrial know-how into productive workflows. |
-| *The next chapter* | | We are glad to talk to founders building technology with real leverage. |
+| Company | Focus |
+| :--- | :--- |
+| **[PROTOMINDS](https://www.protominds.io/)** · [GitHub](https://github.com/PROTOMINDS-IO) | Applied AI: computer vision, RAG and on-premise AI that turn industrial know-how into productive workflows. |
+| *The next chapter* | We are glad to talk to founders building technology with real leverage. |
 
 ---
 
@@ -72,7 +75,11 @@ Germany
 
 ## Der rote Faden
 
-Der rote Faden ist unsere zentrale Idee: Jedes Unternehmen, das wir aufbauen oder an dem wir uns beteiligen, ist ein Abschnitt desselben Fadens, verbunden durch Technologie, langfristiges Denken und unternehmerische Verantwortung.
+Aus dem Knäuel der Möglichkeiten ziehen wir den einen Faden, der trägt. Unser Zeichen zeigt genau das: ein Knäuel aus Fäden und einen roten Faden, der sauber hindurchläuft. Jedes Unternehmen, das wir aufbauen oder an dem wir uns beteiligen, ist ein Abschnitt dieses Fadens.
+
+## شمس · Shams heißt Sonne
+
+Shams ist arabisch und bedeutet Sonne, der älteste Hebel der Welt: eine einzige Quelle, die ganze Systeme in Bewegung setzt. Daraus folgt unser Anspruch: Licht ins Dunkel komplexer Probleme bringen und Unternehmen die Energie geben, über sich hinauszuwachsen.
 
 ## Was wir machen
 
@@ -84,9 +91,9 @@ Der rote Faden ist unsere zentrale Idee: Jedes Unternehmen, das wir aufbauen ode
 
 ## Portfolio
 
-| Unternehmen | Anteil | Fokus |
-| :--- | :---: | :--- |
-| **[PROTOMINDS](https://www.protominds.io/)** | 50 % | Angewandte KI: Computer Vision, RAG und On-Premise-KI für Industrie und Mittelstand. |
+| Unternehmen | Fokus |
+| :--- | :--- |
+| **[PROTOMINDS](https://www.protominds.io/)** | Angewandte KI: Computer Vision, RAG und On-Premise-KI für Industrie und Mittelstand. |
 
 ## Haltung
 
