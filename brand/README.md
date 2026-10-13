@@ -27,8 +27,9 @@
 
 | File | Use |
 | --- | --- |
-| `svg/shams-mark-ondark.svg` / `-onlight.svg` | Mark, 48 px and larger (30 wraps) |
+| `svg/shams-mark-ondark.svg` / `-onlight.svg` | Mark, 48 to 200 px (30 wraps) |
 | `svg/shams-mark-small-*.svg` | Mark below 48 px (7 wraps, thicker strokes) |
+| `svg/shams-mark-large-*.svg` | Mark above ~200 px and print (hairline strokes) |
 | `svg/shams-favicon.svg` | Favicon tile |
 | `png/shams-avatar-512.png` | GitHub org and social avatar |
 | `web/shams-banner-*.png` | GitHub profile, headers (1600×400) |

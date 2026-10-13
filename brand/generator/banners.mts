@@ -2,8 +2,7 @@
 // The ball is the same yarn simulation as the website hero, frozen at one angle.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
-import { emptyLike, view, windYarn, YARN_STYLE, MARK_FULL } from './yarn.ts';
-import { DARK, markSvg } from './marks.mts';
+import { emptyLike, view, windYarn, YARN_STYLE } from './yarn.ts';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require('playwright');
@@ -69,9 +68,12 @@ for (const j of jobs) {
   await pg.locator('#b').screenshot({ path: here(j.file).pathname, omitBackground: j.transparent });
   await pg.close();
 }
-// Avatar: the full mark on the night background.
+// Avatar: the ball on the night background, thread entering left and leaving right.
 const av = await browser.newPage({ viewport: { width: 512, height: 512 } });
-await av.setContent(`<body style="margin:0;background:${DARK.bg};display:grid;place-items:center;height:512px">${markSvg(MARK_FULL, DARK).replace('<svg ', '<svg width="430" height="430" ')}</body>`);
+const A = { cx: 256, cy: 256, R: 168 };
+const avPath = `M -10 ${A.cy + 70} C 90 ${A.cy + 70} ${A.cx - 110} ${A.cy} ${A.cx} ${A.cy} S ${A.cx + 170} ${A.cy - 70} 522 ${A.cy - 70}`;
+const avRed = [[16, 0.07], [6, 0.25], [2.4, 1]].map(([w, o]) => `<path d="${avPath}" stroke="${NIGHT.red}" stroke-width="${w}" opacity="${o}"/>`).join('');
+await av.setContent(`<body style="margin:0;background:${NIGHT.bg}"><svg width="512" height="512"><defs><radialGradient id="sun"><stop offset="0" stop-color="rgba(255,150,95,.26)"/><stop offset=".4" stop-color="rgba(255,70,70,.12)"/><stop offset=".75" stop-color="rgba(255,45,74,.03)"/><stop offset="1" stop-color="rgba(0,0,0,0)"/></radialGradient></defs><g fill="none" stroke-linecap="round">${ball(A.cx, A.cy, A.R, NIGHT, avRed)}</g></svg></body>`);
 await av.screenshot({ path: here('../png/shams-avatar-512.png').pathname });
 await browser.close();
 console.log('banners, og image and avatar written');
