@@ -14,13 +14,9 @@
 | Ink soft | `#CFC9C1` | Body copy on dark. |
 | Muted | `#8D8881` | Secondary text on dark. |
 | Faint | `#4A4741` | Hairlines and tertiary text on dark. |
-| Tangle | `#6E6A64` | Background threads on the website. |
-| Yarn | `#C9C2B8` | The ball on dark. |
-| Core glow | `#FF965F` | The warm light inside the ball, on dark only; always faint. |
 | Paper | `#FAF8F5` | Light background. |
 | Ink on paper | `#141414` | Text on light and in print. |
 | Muted on paper | `#6B6762` | Secondary text on light. |
-| Yarn on paper | `#4F4A44` | The ball on light. |
 
 **Type:** Instrument Serif (headlines), Inter (text, wordmark, documents). Both under the SIL Open Font License.
 
